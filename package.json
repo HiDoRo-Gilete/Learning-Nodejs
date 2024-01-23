@@ -70,7 +70,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/server.js"
+    "start": "nodemon ./src/server.js"
   },
   "repository": {
     "type": "git",
@@ -85,5 +85,8 @@
   "bugs": {
     "url": "https://github.com/HiDoRo-Gilete/Learning-Nodejs/issues"
   },
-  "homepage": "https://github.com/HiDoRo-Gilete/Learning-Nodejs#readme"
+  "homepage": "https://github.com/HiDoRo-Gilete/Learning-Nodejs#readme",
+  "devDependencies": {
+    "nodemon": "3.0.3"
+  }
 }
