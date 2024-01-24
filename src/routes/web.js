@@ -1,17 +1,11 @@
 const express = require('express')
 const router = express.Router()
+const {getHomepage,getInfo,getHidro} = require('../controllers/homeController');
 
 
-router.get('/',(req,res)=>{
-    // res.send('Hello world')
-    res.render('example.ejs')
-})
-router.get('/info/',(req,res)=>{
-    res.send("name: Huynh Quoc Huy")
-})
+router.get('/',getHomepage)
+router.get('/info/',getInfo)
 
-router.get('/test',(req,res)=>{
-    res.send('<h1>Hidro xin chao ban</h1>')
-})
+router.get('/test',getHidro)
 
 module.exports = router

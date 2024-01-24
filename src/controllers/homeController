@@ -1,0 +1,17 @@
+const getHomepage = (req,res)=>{
+    res.send("Hello world! I am Huynh Quoc Huy")
+}
+
+const getInfo = (req,res)=>{
+    res.send('My name: Huynh Quoc Huy')
+}
+
+const getHidro = (req,res) =>{
+    res.render('example.ejs')
+}
+
+module.exports ={
+    getHomepage,
+    getInfo,
+    getHidro
+}
