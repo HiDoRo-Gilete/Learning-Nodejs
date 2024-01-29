@@ -22,6 +22,7 @@ const express = require('express')
 const path = require('path')
 const configViewEngine = require('./config/viewEngine');
 const webRoutes = require('./routes/web')
+const connection = require('./config/database')
 
 console.log(">>> check env:",process.env.PORT);
 const app = express()
@@ -34,6 +35,16 @@ configViewEngine(app)
 //khai bao route
 app.use('/',webRoutes)
 
+//create connection to database
+
+
+connection.query(
+    'select * from USERS u',
+    function (err,results,fields){
+        console.log(">>>results = ",results);
+        //console.log(">>>fields = ",fields);
+    }
+);
 
 app.listen(port,hostname,()=>{
     console.log(`Example app listening on port${port}`)
